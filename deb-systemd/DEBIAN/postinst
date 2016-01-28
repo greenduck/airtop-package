@@ -1,0 +1,4 @@
+#!/bin/sh -e
+
+deb-systemd-helper enable airtop-fpsvc.service || :
+deb-systemd-invoke start airtop-fpsvc.service || :

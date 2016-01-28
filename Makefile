@@ -17,9 +17,11 @@ RM_CMD      = sudo rm -rf
 
 all: daemon overlay $(BINDIR)
 	dpkg-deb --build $(OBJDIR)/deb-upstart $(OUTFILE)_upstart.deb
+	dpkg-deb --build $(OBJDIR)/deb-systemd $(OUTFILE)_systemd.deb
 
 check: all
-	lintian $(OUTFILE)_upstart.deb
+	lintian $(OUTFILE)_upstart.deb || :
+	lintian $(OUTFILE)_systemd.deb || :
 
 .PHONY: daemon
 daemon:
@@ -29,6 +31,8 @@ daemon:
 overlay: $(OBJDIR)
 	$(CP_CMD) -a deb-upstart $(OBJDIR)
 	$(CP_CMD) $(DAEMONBIN) $(OBJDIR)/deb-upstart/usr/sbin
+	$(CP_CMD) -a deb-systemd $(OBJDIR)
+	$(CP_CMD) $(DAEMONBIN) $(OBJDIR)/deb-systemd/usr/sbin
 
 $(OBJDIR):
 	$(MKDIR_CMD) $(OBJDIR)
