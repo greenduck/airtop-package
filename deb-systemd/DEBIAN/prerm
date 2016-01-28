@@ -1,0 +1,4 @@
+#!/bin/sh -e
+
+deb-systemd-invoke stop airtop-fpsvc.service || :
+deb-systemd-helper disable airtop-fpsvc.service || :
