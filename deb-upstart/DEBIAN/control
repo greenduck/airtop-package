@@ -3,7 +3,7 @@ Version:	  1.0-1
 Section:	  utils
 Priority:	  optional
 Architecture:	  amd64
-Depends:	  libc6, libpci3, libsensors4
+Depends:	  libc6, libsensors4
 Installed-Size:	  48
 Maintainer:	  Andrey Gelman <andrey.gelman@compulab.co.il>
 Homepage:	  http://www.compulab.co.il
