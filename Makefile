@@ -29,9 +29,9 @@ daemon:
 
 .PHONY: overlay
 overlay: $(OBJDIR)
-	$(CP_CMD) -a deb-upstart $(OBJDIR)
+	$(CP_CMD) -dR deb-upstart $(OBJDIR)
 	$(CP_CMD) $(DAEMONBIN) $(OBJDIR)/deb-upstart/usr/sbin
-	$(CP_CMD) -a deb-systemd $(OBJDIR)
+	$(CP_CMD) -dR deb-systemd $(OBJDIR)
 	$(CP_CMD) $(DAEMONBIN) $(OBJDIR)/deb-systemd/usr/sbin
 
 $(OBJDIR):
