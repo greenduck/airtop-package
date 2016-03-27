@@ -51,3 +51,5 @@ patch_kernel_cmdline()
 patch_kernel_cmdline || :
 deb-systemd-helper enable airtop-fpsvc.service || :
 deb-systemd-invoke start airtop-fpsvc.service || :
+deb-systemd-helper enable gpu-thermald.service || :
+deb-systemd-invoke start gpu-thermald.service || :

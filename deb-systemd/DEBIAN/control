@@ -4,8 +4,9 @@ Section:	  utils
 Priority:	  optional
 Architecture:	  amd64
 Depends:	  libc6, libsensors4, libatasmart4
-Installed-Size:	  48
+Installed-Size:	  64
 Maintainer:	  Andrey Gelman <andrey.gelman@compulab.co.il>
 Homepage:	  http://www.compulab.co.il
 Description:	  CompuLab AirTop Front Panel service daemon.
  Provide hardware-related metrics to AirTop front panel display controller.
+ In addition, enable setting thermal limit on discrete GPU.

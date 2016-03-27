@@ -1,3 +1,4 @@
 #!/bin/sh -e
 
 stop airtop-fpsvc || :
+stop gpu-thermald || :

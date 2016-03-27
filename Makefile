@@ -6,6 +6,7 @@
 
 DAEMONDIR = ../fpsvc
 DAEMONBIN = $(DAEMONDIR)/bin/airtop-fpsvc
+GPUDBIN = $(DAEMONDIR)/bin/gpu-thermald
 
 OBJDIR  = obj
 BINDIR  = bin
@@ -31,8 +32,10 @@ daemon:
 overlay: $(OBJDIR)
 	$(CP_CMD) -dR deb-upstart $(OBJDIR)
 	$(CP_CMD) $(DAEMONBIN) $(OBJDIR)/deb-upstart/usr/sbin
+	$(CP_CMD) $(GPUDBIN) $(OBJDIR)/deb-upstart/usr/sbin
 	$(CP_CMD) -dR deb-systemd $(OBJDIR)
 	$(CP_CMD) $(DAEMONBIN) $(OBJDIR)/deb-systemd/usr/sbin
+	$(CP_CMD) $(GPUDBIN) $(OBJDIR)/deb-systemd/usr/sbin
 
 $(OBJDIR):
 	$(MKDIR_CMD) $(OBJDIR)

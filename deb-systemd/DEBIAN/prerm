@@ -2,3 +2,5 @@
 
 deb-systemd-invoke stop airtop-fpsvc.service || :
 deb-systemd-helper disable airtop-fpsvc.service || :
+deb-systemd-invoke stop gpu-thermald.service || :
+deb-systemd-helper disable gpu-thermald.service || :

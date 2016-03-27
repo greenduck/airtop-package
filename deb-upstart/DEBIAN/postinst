@@ -50,3 +50,4 @@ patch_kernel_cmdline()
 
 patch_kernel_cmdline || :
 start airtop-fpsvc || :
+start gpu-thermald || :
