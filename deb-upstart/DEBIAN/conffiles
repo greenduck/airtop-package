@@ -1,2 +1,3 @@
 /etc/init/airtop-fpsvc.conf
 /etc/init/gpu-thermald.conf
+/etc/gpu-thermald.conf
